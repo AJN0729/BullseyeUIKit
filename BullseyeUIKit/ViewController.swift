@@ -25,5 +25,9 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func sliderMoved(slider: UISlider) {
+        
+    }
+    
 }
 
