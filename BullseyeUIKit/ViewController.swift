@@ -8,17 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var currentValue = 50
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let roundedValue = slider.value.rounded()
+        currentValue = Int(roundedValue)
     }
 
     @IBAction func showAlert() {
-      
-        let alert = UIAlertController(title: "Hello World", message: "Hi", preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Cancel", style: .default, handler: nil)
+        let message = "the value of the slider is now: \(currentValue)"
+      
+        let alert = UIAlertController(title: "Hello World", message: message, preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "Okay", style: .default, handler: nil)
         
         alert.addAction(action)
         
@@ -26,7 +31,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderMoved(slider: UISlider) {
-        
+        let roundedValue = slider.value.rounded()
+        currentValue = Int(roundedValue)
     }
     
 }
