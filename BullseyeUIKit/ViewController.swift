@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var targetValue = 0
 
     @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var targetLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
